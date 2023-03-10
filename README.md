@@ -10,9 +10,7 @@ XBwiki Theme 是一款 使用说明 / 帮助文件 / WIKI文档使用的Typecho�
 
 SQL语句如下：
 
-<code>
-ALTER TABLE typecho_metas ADD  iconfont varchar(20) DEFAULT 'fa-bars';
-</code>
+<code>ALTER TABLE typecho_metas ADD  iconfont varchar(20) DEFAULT 'fa-bars';</code>
 
 2. 修改程序文件（可选项，需修改程序文件）
 
