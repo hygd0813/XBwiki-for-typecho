@@ -35,7 +35,20 @@
 		});
 		
 </script>
-<script type="text/javascript" src="<?php $this->options->themeUrl('lib/js/prettify.js'); ?>"></script>
+	   <div class="searchbox">
+    <div class="searchbox-container">
+        <div class="searchbox-input-wrapper">
+            <form class="search-form" method="post" action="<?php $this->options->siteUrl(); ?>" role="search">
+                <input name="s" type="search" class="searchbox-input" placeholder="输入您感兴趣的关键词尽情搜索吧！" />
+                <span class="searchbox-close searchbox-selectable"><i class="fa fa-times-circle"></i></span>
+            </form>
+        </div>
+    </div>
+</div>	
+<script>
+document.addEventListener('DOMContentLoaded',function(){(function($){$('#search').click(function(){$('.searchbox').toggleClass('show')});$('.searchbox .searchbox-mask').click(function(){$('.searchbox').removeClass('show')});$('.searchbox-close').click(function(){$('.searchbox').removeClass('show')})})(jQuery)});
+</script>
+<script type="text/javascript" src="<?php XBwikiUrl('lib/js/prettify.js'); ?>"></script>
 <script type="text/javascript">
 $('pre').addClass('prettyprint');
 $('table').each(function(){
@@ -54,7 +67,7 @@ $('#grace-ctype div').click(function(){
 .grace-content pre .copy{width:50px; cursor:pointer; text-align:center; height:28px; line-height:28px; background:#3688FF; font-size:12px; color:#FFF; position:absolute; z-index:1; right:0px; top:0px;}
 blockquote{font-size:15px; line-height:2em; padding:10px 20px; color:#000000; background:#F7F8F9; border-left:5px solid #009688; margin:15px 0; text-indent:0;}
 </style>
-<script type="text/javascript" src="<?php $this->options->themeUrl('lib/js/clipboard.min.js'); ?>"></script>
+<script type="text/javascript" src="<?php XBwikiUrl('lib/js/clipboard.min.js'); ?>"></script>
 <script type="text/javascript">
 $('pre').each(function(){
 	$('<div class="copy">复制</div>').appendTo($(this));

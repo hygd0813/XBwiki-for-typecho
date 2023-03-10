@@ -31,14 +31,15 @@
 <meta name="keywords"  content="<?php $k=$this->fields->keyword;if(empty($k)){echo $this->keywords();}else{ echo $k;};?>">
 <meta name="description" content="<?php $d=$this->fields->description;if(empty($d) || !$this->is('single')){if($this->getDescription()){echo $this->getDescription();}}else{ echo $d;};?>" />
 <?php endif;?>  
-<link rel="stylesheet" href="<?php $this->options->themeUrl('lib/css/grace.css'); ?>"  />
-<link rel="stylesheet" href="<?php $this->options->themeUrl('lib/css/markdown.css'); ?>"  />
-<link rel="stylesheet" href="<?php $this->options->themeUrl('lib/css/prettify.css'); ?>"  />
-<link rel="stylesheet" type="text/css" href="<?php $this->options->themeUrl('lib/css/font_611166_fpdzl80md8u.css'); ?>" />
-<link href="<?php $this->options->themeUrl('lib/font-awesome/css/font-awesome.css'); ?>" rel="stylesheet">
+<link rel="stylesheet" href="<?php XBwikiUrl('lib/css/grace.css'); ?>"  />
+<link rel="stylesheet" href="<?php XBwikiUrl('lib/css/search.css'); ?>"  />
+<link rel="stylesheet" href="<?php XBwikiUrl('lib/css/markdown.css'); ?>"  />
+<link rel="stylesheet" href="<?php XBwikiUrl('lib/css/prettify.css'); ?>"  />
+<link rel="stylesheet" type="text/css" href="<?php XBwikiUrl('lib/css/font_611166_fpdzl80md8u.css'); ?>" />
+<link href="<?php XBwikiUrl('lib/font-awesome/css/font-awesome.css'); ?>" rel="stylesheet">
 <?php if($this->options->favicon): ?><link rel="shortcut icon" href="<?php $this->options->favicon();?>"><?php endif; ?>
-<script type="text/javascript" src="<?php $this->options->themeUrl('lib/js/jquery-3.4.1.min.js'); ?>" ></script>
-<script type="text/javascript" src="<?php $this->options->themeUrl('lib/js/grace.js'); ?>" ></script>
+<script type="text/javascript" src="<?php XBwikiUrl('lib/js/jquery-3.4.1.min.js'); ?>" ></script>
+<script type="text/javascript" src="<?php XBwikiUrl('lib/js/grace.js'); ?>" ></script>
 <style type="text/css">
 <?php if($this->options->csscode): ?> <?php $this->options->csscode();?><?php endif; ?>
 </style>
@@ -72,7 +73,7 @@
           		<li><a href="https://www.80srz.com" id="nav-tmp" target="_blank">博客</a></li>
 		</ul>
         <div class="grace-fr share_ico">                	        
-   <a href="javascript:Share('sina')" class="fa fa-weibo fa-2x btn" ></a>
+              <a id="search" class="search icon btn" href="javascript:;" title="站内搜索"><i class="fa fa-search"></i></a>
          </div>   
 	</div> 
 </div>

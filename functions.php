@@ -1,5 +1,6 @@
 <?php
 if (!defined('__TYPECHO_ROOT_DIR__')) exit;
+define('INITIAL_VERSION_NUMBER', '1.2');
 
 // 主题设置
 function themeConfig($form){
@@ -10,7 +11,9 @@ function themeConfig($form){
     $gonggao = new Typecho_Widget_Helper_Form_Element_Text('gonggao', NULL, NULL, _t('站点公告'), _t('一段文字或代码，站点公告消息'));
     $form->addInput($gonggao);  
     $ICP = new Typecho_Widget_Helper_Form_Element_Text('ICP', NULL, NULL, _t('ICP备案号'), _t('萌ICP备20221989号'));
-    $form->addInput($ICP);  
+    $form->addInput($ICP); 
+    $xbwikicdnAddress = new Typecho_Widget_Helper_Form_Element_Text('xbwikicdnAddress', NULL, NULL, _t('CSS文件的链接地址替换'), _t('请输入你的CDN云存储地址，例如：https://cdn.jsdelivr.net/gh/hygd0813/XBwiki@main/，支持绝大部分有镜像功能的CDN服务<br><b>被替换的原地址为主题文件位置，即：https://wiki.80srz.com/usr/themes/XBwiki/</b>'));
+    $form->addInput($xbwikicdnAddress);	  
     $themecompress = new Typecho_Widget_Helper_Form_Element_Select('themecompress',array('0'=>'不开启','1'=>'开启'),'0','HTML压缩功能','是否开启HTML压缩功能,缩减页面代码');
     $form->addInput($themecompress);
     $GEditor = new Typecho_Widget_Helper_Form_Element_Select(
@@ -45,6 +48,17 @@ function themeFields ($layout) {
     $layout->addItem($keyword);
     $layout->addItem($description);
   
+}
+
+/**设置CDN**/
+function XBwikiUrl($path) {
+    $options = Helper::options();
+    $ver = '?ver='.constant("INITIAL_VERSION_NUMBER");
+    if ($options->XBwikicdnAddress) {
+        echo rtrim($options->XBwikicdnAddress, '/').'/'.$path.$ver;
+    } else {
+        $options->themeUrl($path.$ver);
+    }
 }
 
 /* 加强后台编辑器功能 */

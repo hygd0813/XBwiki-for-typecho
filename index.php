@@ -4,7 +4,7 @@
  * 
  * @package XBwiki System Theme 
  * @author 荒野孤灯
- * @version 1.0
+ * @version 1.2
  * @link https://www.80srz.com
  */
 
@@ -34,7 +34,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 	<div class="grace-rows2 grace-r">
 		<div class="sabackhome">
 			<?php if($this->options->postdownads): ?>
-                 <img src="<?php $this->options->themeUrl('/img/spiker.png'); ?>" width="20px" height="20px" style="padding-left:5px;padding-top:5px;float:left;padding-buttom:5px;" alt="公告" />
+                 <img src="<?php XBwikiUrl('/img/spiker.png'); ?>" width="20px" height="20px" style="padding-left:5px;padding-top:5px;float:left;padding-buttom:5px;" alt="公告" />
                  <marquee scrollamount="5" style="color:red;float:right;width:92%;" ><?php $this->options->gonggao();?></marquee>
             <?php endif; ?>
 		</div>      
