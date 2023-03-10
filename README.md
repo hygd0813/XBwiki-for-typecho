@@ -27,7 +27,7 @@ ALTER TABLE typecho_metas ADD  iconfont varchar(20) DEFAULT 'fa-bars';
 - 傻瓜式制作帮助说明文件
 - 支持MarkDown语法
 - 支持代码高亮
-- 支持文字一键复制
+- 支持代码文字一键复制
 - 内置字体图标Font-Awesome（共675个字体图标）
 - 丰富的后台主题设置
 - 动静态文件分离，方便CDN加速
@@ -42,5 +42,7 @@ https://wiki.80srz.com
 
 ## 更新记录
 
+- 2023/3/4 开始开发发布 V1.1 版；
+- 2023/3/10 更新 V1.2 版；
 
 
