@@ -2,6 +2,8 @@
 
 XBwiki Theme 是一款 使用说明 / 帮助文件 / WIKI文档使用的Typecho主题，由技术小白开发，故取名 `XBwiki` 。
 
+![ppuPrvD.png](https://s1.ax1x.com/2023/03/10/ppuPrvD.png)
+
 ## 注意
 
 1. 启用主题前需要在`typecho_metas`表添加字段 `iconfont`
