@@ -16,7 +16,9 @@ ALTER TABLE typecho_metas ADD  iconfont varchar(20) DEFAULT 'fa-bars';
 
 2. 修改程序文件（可选项，需修改程序文件）
 
+> 替换程序文件1： admin/manage-categories.php
 
+> 替换程序文件2：var/Widget/Metas/Category/Edit.php
 
 ## 亮点功能：
 
